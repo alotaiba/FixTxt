@@ -135,9 +135,7 @@ export default function Home() {
 
       <Container component="footer" sx={{ mt: "auto", py: 3 }}>
         Made with <span>♥</span> by{" "}
-        <a href="https://mawqey.com/" target="_blank">
-          Abdulrahman Saleh Khamis
-        </a>
+        <a href="https://mawqey.com/">Abdulrahman Saleh Khamis</a>
       </Container>
     </Container>
   );
