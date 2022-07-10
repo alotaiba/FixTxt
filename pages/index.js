@@ -14,29 +14,48 @@ import {
   DeleteForever as ClearAllIcon,
 } from "@mui/icons-material";
 
+Object.assign(String.prototype, {
+  clearFormatting() {
+    return this.replace(/\u202A|\u202B|\u202C/g, "");
+  },
+});
+
+Object.assign(String.prototype, {
+  toRTL() {
+    return this.split("\n")
+      .map((line) => "\u202B" + line + "\u202C")
+      .join("\n");
+  },
+});
+
+Object.assign(String.prototype, {
+  toLTR() {
+    return this.split("\n")
+      .map((line) => "\u202A" + line + "\u202C")
+      .join("\n");
+  },
+});
+
 export default function Home() {
   const [modifiedText, setModifiedText] = useState("");
-  const [originalText, setOriginalText] = useState("");
 
   const handleRTLConversion = () => {
-    setModifiedText("\u202B" + originalText + "\u202C");
+    setModifiedText((value) => value.clearFormatting().toRTL());
   };
 
   const handleLTRConversion = () => {
-    setModifiedText("\u202A" + originalText + "\u202C");
+    setModifiedText((value) => value.clearFormatting().toLTR());
   };
 
   const handleClearFormatting = () => {
-    setModifiedText(originalText);
+    setModifiedText((value) => value.clearFormatting());
   };
 
   const handleClearAll = () => {
-    setOriginalText("");
     setModifiedText("");
   };
 
   const onTextAreaChange = (e) => {
-    setOriginalText(e.target.value);
     setModifiedText(e.target.value);
   };
 
@@ -116,7 +135,7 @@ export default function Home() {
 
       <Container component="footer" sx={{ mt: "auto", py: 3 }}>
         Made with <span>♥</span> by{" "}
-        <a href="#" target="_blank">
+        <a href="https://mawqey.com/" target="_blank">
           Abdulrahman Saleh Khamis
         </a>
       </Container>
