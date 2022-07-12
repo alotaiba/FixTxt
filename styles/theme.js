@@ -13,6 +13,9 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    editorButton: {
+      main: "#000000",
+    },
   },
 });
 
