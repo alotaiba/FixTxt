@@ -24,7 +24,7 @@ export default function IndexInfo() {
       <Box sx={{ mt: 5 }}>
         <Typography variant="h4">How to use FixTxt?</Typography>
         <ol>
-          <li>Copy or write the text that you want to fix in the text area.</li>
+          <li>Copy or write the text that you want to fix in the text area</li>
           <li>
             Click on the change text direction icon{" "}
             <FormatTextdirectionRToLIcon
@@ -33,7 +33,6 @@ export default function IndexInfo() {
                 verticalAlign: "text-bottom",
               }}
             />
-            .
           </li>
           <li>
             Copy the the result by clicking on the copy icon{" "}
@@ -43,22 +42,21 @@ export default function IndexInfo() {
                 verticalAlign: "text-bottom",
               }}
             />
-            .
           </li>
         </ol>
       </Box>
       <Box sx={{ mt: 5 }}>
         <Typography variant="h4">Use Cases</Typography>
         <Typography variant="body1" gutterBottom>
-          You can use the text to fix your RTL &lt;-&gt; LTR mixed text in a lot
-          of placed around the web.
+          You can use the text to fix your RTL and LTR mixed text in a lot of
+          placed around the web.
         </Typography>
         <Typography variant="h5">Instagram</Typography>
         <Image src={instagramUseCaseImage} alt="Picture of the author" />
         <Typography variant="h5">Notion</Typography>
         <Image src={notionUseCaseImage} alt="Picture of the author" />
         <Typography variant="body1" gutterBottom>
-          Plus much much more...
+          Plus much more...
         </Typography>
       </Box>
     </>

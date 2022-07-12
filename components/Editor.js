@@ -1,11 +1,10 @@
 import { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Snackbar from "@mui/material/Snackbar";
 import {
-  FormatTextdirectionLToR as FormatTextdirectionLToRIcon,
   FormatTextdirectionRToL as FormatTextdirectionRToLIcon,
   FormatClear as FormatClearIcon,
   ContentCopy as ContentCopyIcon,
@@ -49,11 +48,6 @@ export default function Editor() {
     setModifiedText((value) => value.clearFormatting().toRTL());
   };
 
-  const handleLTRConversion = () => {
-    if (modifiedText == "") return;
-    setModifiedText((value) => value.clearFormatting().toLTR());
-  };
-
   const handleClearFormatting = () => {
     if (modifiedText == "") return;
     setModifiedText((value) => value.clearFormatting());
@@ -89,16 +83,6 @@ export default function Editor() {
         }}
       >
         <Stack direction="row" spacing={1}>
-          <Tooltip title="Change to LTR">
-            <EditorButton
-              onClick={handleLTRConversion}
-              aria-label="fix-ltr-text"
-              color="editorButton"
-            >
-              <FormatTextdirectionLToRIcon />
-            </EditorButton>
-          </Tooltip>
-
           <Tooltip title="Change to RTL">
             <EditorButton
               onClick={handleRTLConversion}
