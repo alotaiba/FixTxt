@@ -28,7 +28,10 @@ export default function Home() {
           property="og:description"
           content="Fix your Right-to-Left (RTL) text when you mix it with Left-to-Right (LTR) text."
         />
-        <meta property="og:image" content="https://fixtxt.co/og_image.png" />
+        <meta
+          property="og:image"
+          content="https://fixtxt.co/og_image.png?v=12072022_2217"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://fixtxt.co/" />
@@ -42,7 +45,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://fixtxt.co/og_image.png"
+          content="https://fixtxt.co/og_image.png?v=12072022_2217"
         />
       </Head>
 
